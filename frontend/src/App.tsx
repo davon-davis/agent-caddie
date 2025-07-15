@@ -5,6 +5,7 @@ import './App.css'
 import axios from 'axios'
 import { Button } from '@/components/ui/button'
 
+
 function App() {
   const [response, setResponse] = useState("")
   const didFetch = useRef(false)
@@ -19,9 +20,10 @@ function App() {
     wind_dir: "NE",
     wind_speed: 8
   };
-
+  
+  const base = import.meta.env.VITE_API_BASE_URL;
   const getRecommendation = async () => {
-    const res = await fetch("http://localhost:8000/api/caddie/recommend", {
+    const res = await fetch(`${base}/api/caddie/recommend`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),

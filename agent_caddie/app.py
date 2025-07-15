@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import openai
+import os
+from dotenv import load_dotenv
 
 # Import your modules using absolute paths if app.py is at the project root
 from prompts import build_prompt
@@ -12,10 +14,13 @@ from db import save_club_distances, get_similar_shots, save_shot
 
 app = FastAPI()
 
+load_dotenv()
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 # Enable CORS for local frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:8000", "http://127.0.0.1:5173"],  # React dev server
+    # allow_origins=["http://localhost:5173", "http://localhost:8000", "http://127.0.0.1:5173"],  # React dev server
+    allow_origins=[API_BASE_URL],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
