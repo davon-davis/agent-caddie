@@ -1,4 +1,0 @@
-app = "agent-caddie"  
-
-[build]
-  dockerfile = "Dockerfile"
