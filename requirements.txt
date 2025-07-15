@@ -1,0 +1,9 @@
+openai==1.25.0
+supabase
+click
+questionary
+tabulate
+python-dotenv
+pytest
+httpx<0.24.0
+

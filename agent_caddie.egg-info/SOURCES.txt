@@ -1,0 +1,13 @@
+setup.py
+agent_caddie/__init__.py
+agent_caddie/analytics.py
+agent_caddie/cli.py
+agent_caddie/db.py
+agent_caddie/embeddings.py
+agent_caddie/prompts.py
+agent_caddie.egg-info/PKG-INFO
+agent_caddie.egg-info/SOURCES.txt
+agent_caddie.egg-info/dependency_links.txt
+agent_caddie.egg-info/entry_points.txt
+agent_caddie.egg-info/requires.txt
+agent_caddie.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+openai
+supabase
+click
+questionary
+tabulate
+python-dotenv

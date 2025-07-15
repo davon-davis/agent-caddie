@@ -1,0 +1,3 @@
+[console_scripts]
+agent-caddie = agent_caddie.cli:cli
+
