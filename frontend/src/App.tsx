@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
 import { Button } from '@/components/ui/button'
+import { ShotChat } from './ShotChat'
 
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
 
   return (
     <div>
-      <h1>V-Caddie</h1>
+      {/* <h1>V-Caddie</h1>
       <div>
         <Button onClick={getRecommendation}>
           Get Recommendation
@@ -57,7 +58,8 @@ function App() {
       </div>
       <div className="card">
         <p>{response}</p>
-      </div>
+      </div> */}
+      <ShotChat />
     </div>
   )
 }

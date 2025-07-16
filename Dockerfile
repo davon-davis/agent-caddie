@@ -22,7 +22,7 @@ COPY --from=backend-build /usr/local/lib/python3.11/site-packages /usr/local/lib
 # Copy backend code
 COPY --from=backend-build /app /app
 # Copy built frontend
-COPY --from=frontend-build /app/frontend/dist /app/frontend_dist
+COPY --from=frontend-build /app/frontend/dist /app/dist
 
 ENV PORT=8080
 EXPOSE 8080

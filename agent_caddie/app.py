@@ -21,8 +21,8 @@ API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 # Enable CORS for local frontend
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=["http://localhost:5173", "http://localhost:8000", "http://127.0.0.1:5173"],  # React dev server
-    allow_origins=[API_BASE_URL],
+    allow_origins=["http://localhost:5173", "http://localhost:8000", "http://127.0.0.1:5173"],  # React dev server
+    # allow_origins=[API_BASE_URL],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -108,4 +108,4 @@ if __name__ == "__main__":
     uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)
 
 
-app.mount("/", StaticFiles(directory="frontend_dist", html=True), name="frontend")
+# app.mount("/", StaticFiles(directory="dist", html=True), name="frontend")
