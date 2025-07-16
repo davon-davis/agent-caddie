@@ -8,9 +8,9 @@ import os
 from dotenv import load_dotenv
 
 # Import your modules using absolute paths if app.py is at the project root
-from prompts import build_prompt
-from analytics import compute_effective_distance
-from db import save_club_distances, get_similar_shots, save_shot
+from .prompts import build_prompt
+from .analytics import compute_effective_distance
+from .db import save_club_distances, get_similar_shots, save_shot
 
 app = FastAPI()
 
