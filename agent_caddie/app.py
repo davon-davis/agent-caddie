@@ -15,11 +15,9 @@ from .db import save_club_distances, get_similar_shots, save_shot
 
 app = FastAPI()
 
-# Serve React at /
-app.mount("/", StaticFiles(directory="frontend_dist", html=True), name="frontend")
-
 load_dotenv()
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
+
 # Enable CORS for local frontend
 app.add_middleware(
     CORSMiddleware,
@@ -108,3 +106,6 @@ async def record_shot(details: ShotDetails):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)
+
+
+app.mount("/", StaticFiles(directory="frontend_dist", html=True), name="frontend")
