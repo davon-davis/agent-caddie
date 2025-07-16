@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
 import openai
@@ -13,6 +14,9 @@ from .analytics import compute_effective_distance
 from .db import save_club_distances, get_similar_shots, save_shot
 
 app = FastAPI()
+
+# Serve React at /
+app.mount("/", StaticFiles(directory="frontend_dist", html=True), name="frontend")
 
 load_dotenv()
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
