@@ -21,9 +21,8 @@ function App() {
     wind_speed: 8
   };
   
-  const base = import.meta.env.VITE_API_BASE_URL;
   const getRecommendation = async () => {
-    const res = await fetch(`${base}/api/caddie/recommend`, {
+    const res = await fetch(`/api/caddie/recommend`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
