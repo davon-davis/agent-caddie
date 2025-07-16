@@ -27,4 +27,4 @@ COPY --from=frontend-build /app/frontend/dist /app/frontend_dist
 ENV PORT=8080
 EXPOSE 8080
 
-CMD ["python", "-m", "uvicorn", "agent_caddie.app:app", "--host", "0.0.0.0", "--port", "${PORT}"]
+CMD ["uvicorn", "agent_caddie.app:app", "--host", "0.0.0.0", "--port", "8080"]
