@@ -1,7 +1,8 @@
 import os
 from supabase.client import create_client
-from embeddings import get_embedding
 from dotenv import load_dotenv
+
+from .embeddings import get_embedding
 
 load_dotenv()
 
