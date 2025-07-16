@@ -45,9 +45,9 @@ class ShotDetails(BaseModel):
     wind_dir: str
     wind_speed: float
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World! V-Caddie API is running at http://localhost:8000/"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Hello World! V-Caddie API is running at http://localhost:8000/"}
 
 @app.post("/api/caddie/update-yardages")
 async def update_yardages(entries: List[ClubDistanceEntry]):
