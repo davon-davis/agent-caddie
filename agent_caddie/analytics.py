@@ -10,7 +10,6 @@ def wind_adj(dir, sp):
     return base if dir=="Headwind" else -base if dir=="Tailwind" else 0
 
 def compute_effective_distance(scn):
-    print("davoscn", scn)
     return (
       scn["distance"]
       + LIE_ADJ.get(scn["lie"], 0)

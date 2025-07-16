@@ -6,4 +6,5 @@ tabulate
 python-dotenv
 pytest
 httpx<0.24.0
+uvicorn
 
